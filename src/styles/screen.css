@@ -1,0 +1,323 @@
+/*
+    SETTINGS
+*/
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,700');
+
+:root {
+    --color-alpha: #DE4831;
+    --color-beta:  darkgrey;
+    --color-dark:  #221E21;
+
+    --gutter:        24px;
+}
+
+/*
+    ELEMENTS
+*/
+
+body,
+html {
+    /* Positioning */
+
+    /* Box model */
+
+    /* Fonts */
+    font-family: 'Muli', sans-serif;
+    font-size:   16px;
+    line-height: 1.6;
+    color:       var(--color-dark);
+
+    /* Appearance */
+
+    /* Other styles */
+}
+
+/*
+    OBJECTS
+*/
+
+/*
+    Object: Hide
+    ---
+    Hide input fields
+*/
+
+.o-hide {
+    position: absolute;
+    width:    1px;
+    height:   1px;
+    padding:  0;
+    margin:   -1px;
+    overflow: hidden;
+    clip:     rect(0, 0, 0, 0);
+    border:   0;
+}
+
+/* 
+    COMPONENTS 
+*/
+
+/*
+    Component: Container
+    ---
+    Container
+*/
+
+.c-container {
+    width: 100vw;
+}
+
+/*
+    Component: Row
+    ---
+    Row
+*/
+
+.c-row {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: calc(var(--gutter) * 1.2) 0 0 0;
+}
+
+.c-row-padding {
+    padding: calc(var(--gutter) * 1.2) var(--gutter) 0 var(--gutter);
+}
+
+/*
+    Component: Lead
+*/
+
+.c-lead {
+    color: var(--color-dark);
+}
+
+.c-lead__title {
+    font-weight: 700;
+    font-size: 3rem;
+
+    margin: 0;
+}
+
+.c-lead__text {
+    font-weight: 700;
+    font-size: 2rem;
+
+    margin-top: var(--gutter);
+}
+
+/*
+    Component: Form New Todo
+    ---
+    Styling for the form components to add new to do item
+*/
+
+.c-form-new {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin: calc(var(--gutter) / 2) 0;
+    padding: calc(var(--gutter) / 1.5) 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.c-form-new__button {
+    border: none;
+    background: none;
+    margin-right: calc(var(--gutter) / 2);
+    margin-left: var(--gutter);
+    font-size: 1.7rem;
+    color: var(--color-alpha);
+}
+
+/*
+    Component: New Todo
+    ---
+    Styling for the add new todo item
+*/
+
+.c-new-todo {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-new-todo__input {
+    border: none;
+    font-size: 1.3rem;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+.c-new-todo__dropdown {
+    border: none;
+    width: 88px;
+}
+
+.c-new-todo__dropdown:active,
+.c-new-todo__dropdown:focus {
+    outline: none;
+}
+
+.c-new-todo__dropdown-option {
+
+}
+
+/*
+    Component: List of Todos
+    ---
+    Styling of list of todos
+*/
+
+.c-list-item {
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+    align-items: center;
+
+    margin: calc(var(--gutter) / 2) 0 0 0;
+    padding: calc(var(--gutter) / 1.5) 0 28px 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.c-list-item__checkbox {
+    margin-right: var(--gutter);
+}
+
+.c-list-item-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.c-list-item-detail__symbol {
+    height: calc(var(--gutter) / 1.6);
+    width: calc(var(--gutter) / 1.6);
+
+    display: block;
+    -webkit-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    /* ease-out */
+    opacity: 0;
+}
+
+.c-list-item-detail__title {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.c-list-item-detail__category {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-beta);
+}
+
+/*
+    Component: Custum options
+    ---
+    Custom checkboxes
+*/
+
+.c-custom-input-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-alpha);
+    
+    margin-top: 4px;
+    margin-right: calc(var(--gutter) / 1.2);
+    margin-left: calc(var(--gutter) * 1.3);
+}
+
+.c-custom-input-option:focus, .c-custom-input-option:active {
+    box-shadow: 0px 0px 0px 3px rgba(51,133,255,0.2);
+    border-color: var(--color-alpha-x-light);
+}
+
+.c-custom-input-option:hover {
+    border-color: var(--color-alpha);
+}
+
+.c-custom-input-option--checkbox {
+    border-radius: 100%;
+}
+
+.c-custom-input-option--checkbox .c-custom-input-option__symbol {
+    width: 10px;
+    height: 10px;
+    fill: white;
+}
+
+/* checked state */
+.c-custom-input-option-hidden:checked + .c-custom-input-option-label {
+    /*
+        Do magic stuff here, for example:
+        background-color: red;
+    */
+}
+
+.c-custom-input-option-hidden:checked + .c-custom-input-option-label .c-custom-input-option {
+    /*
+        Do magic stuff here, for example:
+        background-color: red;
+    */
+    box-shadow: 0px 0px 0px 2px rgba(222, 72, 49, 0.3);
+    border-color: var(--color-alpha);
+    background: var(--color-alpha);
+}
+
+.c-custom-input-option-hidden:checked+.c-custom-input-option-label .c-custom-input-option__symbol {
+    /*
+        Do magic stuff here, for example:
+        fill: blue;
+    */
+    -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition: all 100ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition: all 100ms cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    /* ease-in */
+    -webkit-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition-timing-function: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    /* ease-in */
+    opacity: 1;
+}
+
+/* 
+    UTILITIES 
+*/
+
+/*
+    Utility: Color
+    ---
+    Helper classes for color
+*/
+
+.u-color-alpha {
+    color: var(--color-alpha);
+}
+
+/*
+    Utility: Fade out
+    ---
+    For the notification animation
+*/
+
+.u-fade-out {
+    opacity: 0;
+}
