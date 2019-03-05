@@ -5,5 +5,20 @@
   "main": "null",
   "repository": "https://github.com/Frontend-MCT/to-done-oefening-NicolasMaas",
   "author": "Nicolas Maas",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "serve": "gulp serve"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "webpack": "^4.29.6",
+    "webpack-stream": "^5.2.1"
+  }
 }

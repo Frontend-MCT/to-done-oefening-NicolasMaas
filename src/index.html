@@ -14,41 +14,38 @@
     <link rel="stylesheet" href="style/style.css">
 
     <!-- Scripts -->
-    <script defer src="script/lib/todo.js"></script>
+    <!-- <script defer src="script/lib/todo.js"></script>
     <script defer src="script/lib/todoModule.js"></script>
     <script defer src="script/lib/dataAccess.js"></script>
-    <script defer src="script/app.js"></script>
+    <script defer src="script/app.js"></script> -->
+    <script src="script/app.bundle.js"></script>
 
     <title>To do ✔</title>
 </head>
 
 <body>
     <div class="c-container">
-
         <div class="c-header">
-            <h1 class="c-header__text">Hello <span class="js-username" contenteditable="true">Bert</span> ,</h1>
+            <h1 class="c-header__text">Hello <span class="js-username" contenteditable="true">Nicolas</span> ,</h1>
             <h2 class="c-header__text-sub ">There are <span class="js-todo-count">0</span> todo's</h2>
         </div>
+
         <section class="c-row__header">
             <div class="c-form">
                 <button type="button" class="c-form__submit js-todo-add"> +</button>
                 <div class="c-form__text">
                     <input type="text" name="" id="" placeholder="Enter new task here" class="c-form__input js-new-title">
                     <select name="" id="" class="c-form__select js-new-category">
-                        <option value="School">·School</option>
+                        <option value="School">School</option>
                         <option value="Work">Work</option>
                         <option value="Hobby">Hobby</option>
                     </select>
                 </div>
             </div>
         </section>
+
         <section class="js-todo-container">
         </section>
-
     </div>
-
 </body>
-
-
-
 </html>
