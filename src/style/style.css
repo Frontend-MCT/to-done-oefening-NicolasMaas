@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,500,700');
+
+
+:root {
+    --color-alpha: orangered;
+    --color-alpha-light: #f9761f;
+    --color-shadow-light: rgba(249, 117, 32, 0.1);
+    --color-x-light: #C6C6C6;
+    --color-light: #949494;
+    --gutter: 16px;
+}
+
+body {
+    font-family: 'Muli',
+        sans-serif;
+    font-size: 16px;
+}
+
+
+
+.c-form {
+    display: flex;
+    align-items: center;
+}
+
+.c-form__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-form__submit {
+    all: unset;
+    font-size: 20px;
+    margin-right: 16px;
+    color: var(--color-alpha);
+    width: 16px;
+    height: 16px;
+}
+
+.c-form__select {
+    all: unset;
+
+    margin-top: calc(var(--gutter)/2);
+}
+
+/* Hide the actual input with the class .o-hide-accessible */
+
+/* checked state */
+.c-custom-input-option-hidden+.c-custom-input-option-label .c-custom-input-option__symbol {
+    opacity: 0;
+    transition: var(--transition-alpha);
+}
+
+.c-custom-input-option-hidden:checked+.c-custom-input-option-label .c-custom-input-option__symbol {
+    opacity: 1;
+    display: block;
+}
+
+.c-custom-input-option {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: var(--gutter);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid var(--color-alpha-light);
+    box-sizing: border-box;
+}
+
+.c-custom-input-option:hover,
+.c-custom-input-option:focus {
+    border-color: var(--color-alpha-light);
+    box-shadow: 0px 0px 3px 3px var(--color-shadow-light);
+}
+
+.c-custom-input-option-hidden:checked+.c-custom-input-option-label .c-custom-input-option {
+
+    background-color: var(--color-alpha);
+}
+
+.c-custom-input-option--radio {
+    fill: var(--color-alpha);
+    border-radius: 100%;
+}
+
+.c-custom-input-option--checkbox .c-custom-input-option__symbol {
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    background-color: var(--color-alpha);
+    border-radius: 50%;
+}
+
+.c-custom-input-option--radio .c-custom-input-option__symbol {
+    width: 6px;
+    height: 6px;
+    align-self: center;
+    background-color: var(--color-alpha);
+    border-radius: 50%;
+}
+
+/*------ CUSTOM INPUT -----*/
+/*
+    Object: Hide accessible
+    ---
+    Accessibly hide any element
+*/
+
+.o-hide-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.c-form__input {
+    margin-right: 40px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.c-form__submit:active,
+.c-form__submit:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+
+.c-container {
+    margin: 0 auto 0;
+    max-width: 600px;
+    /* background-color: orangered; */
+}
+
+.c-header {
+    padding: 20px;
+}
+
+.c-header__text {
+    font-size: 2rem;
+    margin: var(--gutter);
+    font-weight: 600;
+
+}
+
+.c-header__text-sub {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    margin-left: var(--gutter);
+}
+
+.c-row {
+    padding: var(--gutter);
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--color-x-light);
+}
+
+
+.c-row__header {
+    padding: var(--gutter);
+}
+
+.c-row__sub {
+    color: var(--color-light);
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.c-row__checkbox {
+    margin-right: var(--gutter);
+}
