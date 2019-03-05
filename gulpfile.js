@@ -71,8 +71,8 @@ const eslint = require('gulp-eslint');
     const serve = gulp.parallel(watchFiles, browserSync, scripts);
 
     function watchFiles() {
-        gulp.watch('./src/script/**/*'),
-        gulp.series(scriptsLint, scripts);
+        gulp.watch(['./src/script/**/*'],
+        gulp.series(scripts, browserSyncReload));
 
         gulp.watch(['./src/**/*.html'], 
         gulp.series(minifyHTML, browserSyncReload));
